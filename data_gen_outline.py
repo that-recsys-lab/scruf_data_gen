@@ -7,9 +7,9 @@ agents = 3
 items = 100
 agent_dist = [0, .25, .25, .5]
 users = 40
-compatibility1 = "0,0,1"
-compatibility2 = "1,0,0"
-compatibility3 = "1,0,1"
+compatibility1 = [0,0,1]
+compatibility2 = [1,0,0]
+compatibility3 = [1,0,1]
 dist1 = [0.33,.33,.33]
 start1 = 1
 end = 20
@@ -23,6 +23,7 @@ class item_user_gen:
         self.items = self.config["items"]
         self.agent_dist = self.config["agent_dist"]
         self.users = self.config["users"]
+        self.rec_num = self.config["rec_num"]
         self.compatibility1 = self.config["compatibility1"]
         self.compatibility2 = self.config["compatibility2"]
         self.compatibility3 = self.config["compatibility3"]
@@ -42,6 +43,18 @@ def generate_items(self):
             agent = random.choices(range(0,1+self.agents), self.agent_dist)
             items = items.append({'id': i, 'agents': agent}, ignore_index=True)
         return items
+    
+def generate_recs(self):
+      recs = pd.DataFrame(columns=['user_id', 'item_id', 'score'])
+      for i in range(1, self.user+1):
+         user_id = i
+         user_scores = pd.DataFrame(columns = ['user_id', 'item_id', 'score'])
+         for j in range(1, self.items+1):
+            user_scores = user_scores.append({'user_id': i, 'item_id': j, 'score': random.uniform(0,1) }, ignore_index= True)
+            user_scores = user_scores.sort_values('score',ascending = False).head(self.rec_num)
+         recs = recs.append(user_scores)
+      return recs
+   
 
 class regime_gen:
     def __init__(self, config_file):
@@ -62,3 +75,5 @@ def generate_regime(self):
             user = random.choices(compatabilities, self.dist2)
             regime = regime.append(user, ignore_index=True)
         return regime
+
+
