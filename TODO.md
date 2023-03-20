@@ -18,5 +18,5 @@
   * Actual fairness (all recommendations)
   * target proportion
   * protected item distribution
-  
+  * different agents regimes
 
