@@ -10,4 +10,13 @@
 
 * Versions of datasets
   * different variations of agents
+  
+  
+* Experiments with existing data 
+  * differnt delta
+  * new window sizes
+  * Actual fairness (all recommendations)
+  * target proportion
+  * protected item distribution
+  
 
