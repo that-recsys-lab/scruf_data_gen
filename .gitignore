@@ -1,0 +1,5 @@
+
+*.ipynb_checkpoint
+.ipynb_checkpoints/generation_data-checkpoint.ipynb
+.ipynb_checkpoints/ratings-checkpoint.csv
+ratings.csv
