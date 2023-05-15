@@ -9,8 +9,13 @@
 Latent factors are generated on a per-user or per-item basis based on user and feature profiles.
 
 User and feature profiles are generated from the feature-specific propensities.
+
+## TODO: 
+* Output user compatibilities
+* integrate data generation into SCRUF itself 
+* integrate user model into SCRUF as part of history
  
- ## Process
+## Process
  
  Input: 
  
