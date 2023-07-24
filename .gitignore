@@ -5,3 +5,9 @@
 ratings.csv
 .ipynb_checkpoints/README-checkpoint.md
 .ipynb_checkpoints/TODO-checkpoint.md
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scruf_data_gen.iml
+.idea/vcs.xml
+.ipynb_checkpoints/data_gen_outline-checkpoint.py
