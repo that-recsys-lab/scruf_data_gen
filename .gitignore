@@ -1,7 +1,6 @@
 
 *.ipynb_checkpoint
-.ipynb_checkpoints/generation_data-checkpoint.ipynb
-.ipynb_checkpoints/ratings-checkpoint.csv
+.ipynb_checkpoints/
 ratings.csv
 .ipynb_checkpoints/README-checkpoint.md
 .ipynb_checkpoints/TODO-checkpoint.md
@@ -11,3 +10,5 @@ ratings.csv
 .idea/scruf_data_gen.iml
 .idea/vcs.xml
 .ipynb_checkpoints/data_gen_outline-checkpoint.py
+.idea/
+
