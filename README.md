@@ -19,12 +19,17 @@ User and feature profiles are generated from the feature-specific propensities.
  
  Input: 
  
- * number of users
- * number of items
- * number of features
- * number of sensitive features
- * feature propensities for users (means, standard deviations)
- * feature propensities for items (probabilities)
+* num_items: number of items (int)
+* num_factors: number of factors (int)
+* item_feature_propensities: the distributions used to generate item models ([int x num_factors])
+* std_dev_factors: standard deviation for the factor generation (float <0.0,1.0>)
+* num_agents: number of agents/protected factors (int)
+* agent_discount: subtraction for agents associated items ([(mean,variance) x num_agents])
+* items_dependency: an indication whether the first two item protected factors are co-dependent (boolean)
+* num_users_per_propensity: number of users per user propensity [int x number of user propensity groups]
+* user_feature_propensities: the distributions used to generate user models ( [(propensity) x number of factors] x number of user propensity groups )
+* initial_list_size: the size of the list generated for each user (int)
+* recommendation_size: the size of the recommendation list delivered as output (int)
 
  
  1. Define users (sample from the user propensities for each feature)
